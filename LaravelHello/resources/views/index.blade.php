@@ -15,8 +15,9 @@
     <thead>
         <tr class="table-warning">
           <td>ID</td>
-          <td>naam</td>
           <td>prio</td>
+          <td>samenvatting</td>
+          <td>status</td>
           <td class="text-center">Action</td>
         </tr>
     </thead>
@@ -24,8 +25,9 @@
         @foreach($prio as $prios)
         <tr>
             <td>{{$prios->id}}</td>
-            <td>{{$prios->naam}}</td>
             <td>{{$prios->prio}}</td>
+            <td>{{$prios->samenvatting}}</td>
+            <td>{{$prios->status}}</td>
             <td class="text-center">
                 <a href="{{ route('prios.edit', $prios->id)}}" class="btn btn-primary btn-sm">Edit</a>
                 <form action="{{ route('prios.destroy', $prios->id)}}" method="post" style="display: inline-block">

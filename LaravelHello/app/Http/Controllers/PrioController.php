@@ -37,8 +37,8 @@ class PrioController extends Controller
     public function store(Request $request)
     {
         $storeData = $request->validate([
-            'naam' => 'required|max:255',
             'prio' => 'required|max:255',
+            'samenvatting' => 'required|max:255',
         ]);
         $prio = LaraCrud::create($storeData);
         return redirect('/prios')->with('completed', 'prio has been saved!');
@@ -77,8 +77,9 @@ class PrioController extends Controller
     public function update(Request $request, $id)
     {
         $updateData = $request->validate([
-            'naam' => 'required|max:255',
             'prio' => 'required|max:255',
+            'samenvatting' => 'required|max:255',
+            'status' => 'required|max:255',
         ]);
         LaraCrud::whereId($id)->update($updateData);
         return redirect('/prios')->with('completed', 'prio has been updated');

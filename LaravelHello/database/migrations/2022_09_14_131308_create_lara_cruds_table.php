@@ -15,8 +15,9 @@ return new class extends Migration
     {
         Schema::create('lara_cruds', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('naam');
-            $table->string('prio');           
+            $table->string('prio');
+            $table->string('samenvatting');
+            $table->string('status')->default('Open');
             $table->timestamps();
         });
     }

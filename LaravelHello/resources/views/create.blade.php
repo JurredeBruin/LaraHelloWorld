@@ -10,7 +10,7 @@
 </style>
 <div class="card push-top">
   <div class="card-header">
-    Add User
+    Add Prio1
   </div>
   <div class="card-body">
     @if ($errors->any())
@@ -25,12 +25,12 @@
       <form method="post" action="{{ route('prios.store') }}">
           <div class="form-group">
               @csrf
-              <label for="naam">Name</label>
-              <input type="text" class="form-control" name="naam"/>
+              <label for="prio">Prio:</label>
+              <input type="text" class="form-control" name="prio"/>
           </div>
           <div class="form-group">
-              <label for="prio">Prio</label>
-              <input type="text" class="form-control" name="prio"/>
+              <label for="samenvatting">Samenvatting:</label>
+              <input type="text" class="form-control" name="samenvatting"/>
           </div>
           <button type="submit" class="btn btn-block btn-danger">Create Prio</button>
       </form>

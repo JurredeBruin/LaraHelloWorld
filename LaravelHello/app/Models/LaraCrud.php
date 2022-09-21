@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class LaraCrud extends Model
 {
     use HasFactory;
-    protected $fillable = ['naam', 'prio'];
+    protected $fillable = ['prio', 'samenvatting','status'];
 }
