@@ -23,8 +23,8 @@
       </div><br />
     @endif
       <form method="post" action="{{ route('prios.store') }}">
+          @csrf
           <div class="form-group">
-              @csrf
               <label for="prio">Prio:</label>
               <input type="text" class="form-control" name="prio"/>
           </div>
